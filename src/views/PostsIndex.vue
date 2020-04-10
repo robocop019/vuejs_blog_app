@@ -3,7 +3,9 @@
     <h1>All Blog Posts</h1>
 
     <div v-for='post in posts'>
-      <h3> {{post.title}} </h3>
+      <router-link :to="'/posts/' + post.id">
+        <h3> {{post.title}} </h3>
+      </router-link>
       <img :src="post.image" :alt="post.title">
       <p> {{post.body}} </p>
     </div> <!-- end v for loop -->
